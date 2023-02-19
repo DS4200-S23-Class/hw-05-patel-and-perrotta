@@ -6,3 +6,18 @@ body {
 .centered {
     text-align: center;
 }
+
+/* Flexbox */
+.flexbox {
+    display: flex;
+  }
+  
+  /* Left column takes up 60% of the page */
+  #flex_left {
+    flex: 60%;
+  }
+  
+  /* Left column takes up 40% of the page */
+  #flex_right {
+      flex: 40%;
+  }
