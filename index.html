@@ -16,6 +16,7 @@
 </head>
 
 
+
 <body>
 
      <!-- Header -->
@@ -33,8 +34,50 @@
 
         <!-- Right Column In Flexbox -->
         <div id="flex_right"></div>
-    </div>
+            <div id="displayPoint"></div>
 
+        <div>
+            <form id="x">
+                <!-- Select each element -->
+                <label for="points">Select the x-coordinate for the point to be added to the scatterplot: </label>
+                <select id="x_coordinate" name="points">
+
+                <!-- Coordinate options that users can select -->
+                <option selected disabled>Select one</option>
+                <option name="coordinates" value="1">1</option>
+                <option name="coordinates" value="2">2</option>
+                <option name="coordinates" value="3">3</option>
+                <option name="coordinates" value="4">4</option>
+                <option name="coordinates" value="5">5</option>
+                <option name="coordinates" value="6">6</option>
+                <option name="coordinates" value="7">7</option>
+                <option name="coordinates" value="8">8</option>
+                <option name="coordinates" value="9">9</option>
+                </select>
+
+                <br>
+                <!-- set label for select element -->
+                <label for="points">Select the y-coordinate for the point to be added to the scatterplot: </label>
+                <select id="y_coordinate" name="points">
+
+                <!-- Coordinate options that users can select --> 
+                <option selected disabled>Choose one</option>
+                <option name="coordinates" value="1">1</option>
+                <option name="coordinates" value="2">2</option>
+                <option name="coordinates" value="3">3</option>
+                <option name="coordinates" value="4">4</option>
+                <option name="coordinates" value="5">5</option>
+                <option name="coordinates" value="6">6</option>
+                <option name="coordinates" value="7">7</option>
+                <option name="coordinates" value="8">8</option>
+                <option name="coordinates" value="9">9</option>
+                </select>
+            </form>
+
+            <!-- Button to create point selection -->
+            <button type="create" id="createButton">Add Point</button>
+        </div>
+    </div>
 
     <!-- Java Link -->
     <script src="js/java.js"></script>
