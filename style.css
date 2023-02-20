@@ -21,3 +21,38 @@ body {
   #flex_right {
       flex: 40%;
   }
+
+/* formatting for button */
+button {
+	line-height: 1;
+	padding:5px;
+}
+
+/* Style axes color and width */
+.axes {
+	stroke: rgb(0, 0, 0);
+	stroke-width: 2;
+}
+
+/* when user hovers over circle it becomes orange */
+circle:hover {
+	fill: rgb(237, 6, 214);
+}
+
+/* border green */
+.addBorder {
+	stroke: rgb(9, 9, 235);
+	stroke-width: 4;
+}
+
+rect:hover{
+	fill:rgb(240, 18, 107);
+}
+
+.tooltip {
+
+	position: absolute;
+	background-color: grey;
+	border: solid;
+	padding: 5px;
+}
