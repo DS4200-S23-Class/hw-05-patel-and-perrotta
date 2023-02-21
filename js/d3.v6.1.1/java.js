@@ -1,26 +1,26 @@
-// Setting up constants 
+// Setting up constant variables 
 const FRAME_HEIGHT = 550;
 const FRAME_WIDTH = 600;
 const MARGINS = {left: 50, right: 50,
 				top: 50, bottom: 50};
 
-// Constants for scaling purposes
+// Constants for scaling the visualizations 
 const VIS_HEIGHT = FRAME_HEIGHT - MARGINS.top - MARGINS.bottom;
 const VIS_WIDTH = FRAME_WIDTH - MARGINS.left - MARGINS.right;
 
-// create a frame for first vis in column 1
+// Creating a frame for first vis in column 1
 const FRAME1 = d3.select("#flex_left")
 					.append("svg")
 						.attr("height", FRAME_HEIGHT)
 						.attr("width", FRAME_WIDTH)
 						.attr("class", "frame");
 
-// read data from first file
+// Reading data from the scatter data csv 
 d3.csv("data/scatter-data.csv").then((data) => {
 
 	console.log(data);
 
-	// get maximum x and y coordinate values 
+	// get maximum x and y coordinate values from the file 
 	const X_MAX = d3.max(data, d => {return parseInt(d.x)});
 	const Y_MAX = d3.max(data, d => {return parseInt(d.y)});
 
@@ -60,9 +60,9 @@ d3.csv("data/scatter-data.csv").then((data) => {
       		.call(d3.axisLeft(Y_SCALE).ticks(10));
 
 	// handles functions for when a circle is clicked 
-	function pointClicked() {
+	function circleClicked() {
 		
-		// event listener 
+		// event listeners
 		this.classList.toggle("addBorder");
 		this.classList.toggle("point");
 
@@ -79,15 +79,15 @@ d3.csv("data/scatter-data.csv").then((data) => {
 		document.getElementById("point2").innerHTML = text2;
 	}
 
-	// Create list of points
+	// Creates list of points that will be circles 
 	let circles = document.getElementsByTagName("circle");
 
-	// loop through all points
+	// Loop through all circles 
 	for (let i = 0; i < circles.length; i++) {
 		
-	    // check each point for clicks
+	    // check each circle for clicks
 	    let circle = circles[i];
-	    circle.addEventListener("click", pointClicked);
+	    circle.addEventListener("click", circleClicked);
 	}
 
 	function addPoint() {
@@ -115,7 +115,7 @@ d3.csv("data/scatter-data.csv").then((data) => {
 	    
 	    // check each point for clicks
 	    let circle = circles[i];
-	    circle.addEventListener("click", pointClicked);
+	    circle.addEventListener("click", circleClicked);
 		}
 	}
 
